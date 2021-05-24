@@ -1,0 +1,9 @@
+translation
+request-response logging
+authentication
+authorization
+OAuth
+http filter
+default middlewares:
+  pagination
+  query mapper

@@ -18,17 +18,17 @@ class EnvironmentVariables {
   @IsString()
   DB_HOST: string;
 
-  @IsString()
+  @IsNumber()
   DB_PORT: number;
 
   @IsString()
-  DB_USER: string;
+  POSTGRES_USER: string;
 
   @IsString()
-  DB_PWD: string;
+  POSTGRES_PASSWORD: string;
 
   @IsString()
-  DB_NAME: string;
+  POSTGRES_DB: string;
 }
 
 export function envValidate(config: Record<string, unknown>) {

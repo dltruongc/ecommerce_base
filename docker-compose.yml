@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '$PORT:$PORT'
+    depends_on:
+      - db
+    env_file: .env
+    command: 'npm run start:dev'
+  db:
+    image: postgres:13.3-alpine
+    container_name: ecommerce_db_dev
+    env_file: .env
+    restart: always
